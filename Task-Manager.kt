@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    TaskManagerImage(name = "All tasks complete", comment="Nice work")
+                    TaskManagerImage(name = stringResource(id = R.string.tasks_complete), comment= stringResource(id = R.string.nice_work))
                 }
             }
         }
@@ -43,7 +43,7 @@ val image = painterResource(id = R.drawable.task_manager)
         horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center )
     {
         Image(painter=image, contentDescription=null, modifier = Modifier.padding(bottom = 50.dp))
-        TaskManagerText(name = "All tasks complete", comment="Nice work")
+        TaskManagerText(name = stringResource(id = R.string.tasks_complete), comment= stringResource(id = R.string.nice_work))
     }
 
 
@@ -61,6 +61,6 @@ fun TaskManagerText(name: String, comment: String) {
 @Composable
 fun TaskManagerTextPreview() {
     MyTaskManagerTheme {
-        TaskManagerImage(name = "All tasks complete", comment="Nice work")
+        TaskManagerImage(name = stringResource(id = R.string.tasks_complete), comment= stringResource(id = R.string.nice_work))
     }
 }
