@@ -39,7 +39,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TaskManagerImage(name: String, comment: String){
 val image = painterResource(id = R.drawable.task_manager)
-    Box{
+    Column (modifier =  Modifier .fillMaxWidth().fillMaxHeight(),
+        horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center )
+    {
         Image(painter=image, contentDescription=null, modifier = Modifier.padding(bottom = 50.dp))
         TaskManagerText(name = "All tasks complete", comment="Nice work")
     }
